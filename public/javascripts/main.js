@@ -1,3 +1,5 @@
+$(function(){
+
 $('#myTab a').click(function (e) {
   e.preventDefault();
   $(this).tab('show');
@@ -15,7 +17,22 @@ var data = {
 		second: "H"
 }
 
-// $.post("/data", data, function(received){
+$contactForm = $('#contact-form')
+console.log($contactForm)
 
-// })
+$contactForm.on('click', '.submit-btn', function(event){
+	"click"
+    event.preventDefault();
+ 	var info = $contactForm.serialize();
+	$contactForm.each(function(){
+        this.reset();
+    });
+    $.post('/sendemail', info, function(data){
+        if(data['success']){
+                $('#success-message').removeClass('hidden');
+        }
+    });
+});
 
+
+});

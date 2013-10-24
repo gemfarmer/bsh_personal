@@ -11,8 +11,8 @@ block content
 				li.col-xs-6.col-md-2
 					a(href="#tab2", data-toggle="tab") Contact
 			div.tab-content
-				div.tab-pane.active#tab1
-					img#self.col-xs-6.col-sm-4(src="images/self-smiling.jpg")
+				div.tab-pane.active#tab1.clearfix
+					img#self.col-xs-6.col-sm-4.pull-left(src="images/self-smiling.jpg")
 					div.text-field
 						h3 Hi! Welcome to my site. 
 						p There isn't much here, but feel
@@ -21,8 +21,8 @@ block content
 							| After graduating from UW-Madison in 2011, I wanted to 
 							| become a farmer, so I worked and apprenticed on several
 							| farms througout North America.
-							| I quickly realized that I did not possess the skill necessary to
-							| become a successful farmer in an such a brutally hard industry,
+							| I quickly realized that I did not possess the fortitute necessary
+							| to survive in such a brutal industry,
 							| so I retreated to the fuzzy, comforting glow of my laptop.
 						p I am now striving to be the 'missing link' between IT and alternative 
 							| agriculture. I am especially interested in the potential utilization of
@@ -31,12 +31,27 @@ block content
 					
 				div.tab-pane#tab2
 					div.text-field
-						h3 Give me a ring
-						form#contact-form(action="/contact", method="post")
-							.form-group What is your favorite drink?
+						h4.col-xs-12.col-sm-8 Send me an email and I'll get back to you as soon as humanly possible!
+						form#contact-form(action="/contact", method="post") 
+							.form-group.col-xs-12.col-sm-12.col-md-6.pull-left 
 								br
-								input.form-control(name="fruit", type="text")
+								input.form-control.col-xs-2.col-sm-2(name="name", type="text", placeholder="Name")
 								br
-								input.btn.btn-default.submit-btn(type="submit")
+	
+								input.form-control.col-xs-6.col-sm-4(name="email", type="email", placeholder="Email address")
+								input.form-control.col-xs-6.col-sm-4(name="subject", type="text", placeholder="Subject")
+								textarea.form-control.col-xs-6.col-sm-4(rows="4", cols="50", name="message", type="text", placeholder="Sweet, sweet message")
+								br
+								button.btn.btn-default.submit-btn(type="submit") Submit
+								#success-message.alert.alert-success.hidden
+									| Application submitted!
+						div.links.col-xs-12.col-sm-12.col-md-6
+							a(href="https://github.com/gemfarmer") 
+								img.col-xs-4(src="/images/github-1024-black.png")
+							a(href="http://www.linkedin.com/profile/view?id=235413563&trk=nav_responsive_tab_profile")
+								img.col-xs-4(src="/images/LinkedIn-Logo-02.png")
+							a(href="https://twitter.com/hedburglar")
+								img.col-xs-4(src="/images/twitter_icon.png")
+								
 
 		

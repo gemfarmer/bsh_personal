@@ -36,31 +36,30 @@ html body .wrapper div.tabbable ul.nav-tabs li.active a {
   background-color: #989898;
   color: #fff;
 }
-html body .wrapper .top-hr {
-  color: #fff;
-}
 html body .wrapper #self {
-  float: left;
-  padding: 50px;
+  padding: 30px;
+  padding-bottom: 0px;
   border-radius: 50%;
 }
 html body .wrapper .text-field {
-  padding-top: 20px;
+  padding-top: 30px;
   text-align: left;
+  padding-right: 30px;
+  padding-left: 30px;
   background-color: #989898;
   height: 600px;
   color: #fff;
   width: 100;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 h3.,
 .form-group {
-  text-align: left;
   margin-left: 10px;
+  font-size: 20px;
 }
-h3. .form-control,
-.form-group .form-control {
-  text-align: left;
-  width: 40%;
+.links {
+  font-size: 20px;
 }
 @-webkit-keyframes mymove {
   0% {
