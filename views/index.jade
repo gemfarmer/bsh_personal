@@ -1,0 +1,42 @@
+extends layout
+
+block content
+	.wrapper.col-xs-12
+		div.header Brian Shea Hedberg
+
+		div.tabbable.col-xs-12
+			ul.nav.nav-tabs
+				li.active.col-xs-6.col-md-2
+					a(href="#tab1", data-toggle="tab") About
+				li.col-xs-6.col-md-2
+					a(href="#tab2", data-toggle="tab") Contact
+			div.tab-content
+				div.tab-pane.active#tab1
+					img#self.col-xs-6.col-sm-4(src="images/self-smiling.jpg")
+					div.text-field
+						h3 Hi! Welcome to my site. 
+						p There isn't much here, but feel
+							| free to make yourself at home anyway.
+						p I am a web developer, future farmer, and nature enthusiast.
+							| After graduating from UW-Madison in 2011, I wanted to 
+							| become a farmer, so I worked and apprenticed on several
+							| farms througout North America.
+							| I quickly realized that I did not possess the skill necessary to
+							| become a successful farmer in an such a brutally hard industry,
+							| so I retreated to the fuzzy, comforting glow of my laptop.
+						p I am now striving to be the 'missing link' between IT and alternative 
+							| agriculture. I am especially interested in the potential utilization of
+							| remote sensing devices in permaculture or aquaponics farms.
+
+					
+				div.tab-pane#tab2
+					div.text-field
+						h3 Give me a ring
+						form#contact-form(action="/contact", method="post")
+							.form-group What is your favorite drink?
+								br
+								input.form-control(name="fruit", type="text")
+								br
+								input.btn.btn-default.submit-btn(type="submit")
+
+		
