@@ -21,7 +21,12 @@ app.use(express.static(path.join(__dirname, '/../public')));
 mongoose.connect('mongodb://localhost/personalsite');
 
 #set up Schema
-Email = mongoose.model('Email', { name: String });
+Email = mongoose.model('Email', {
+	name: String
+	email: String
+	subject: String
+	message: String
+	});
 
 
 # development only
@@ -32,14 +37,18 @@ if ('development' == app.get('env'))
 app.get('/', (req, res)->
 	res.render('index')
 )
-
 app.post('/sendemail', (req,res)->
 	submitInfo = req.body
 	console.log(submitInfo)
-	email = new Email(submitInfo)
-	email.save()
-	console.log("email", email)
-	res.send({success: "success"})
+
+	######################### write simple form validation then send it to the server!!!!
+	if submitInfo.name && submitInfo.email && submitInfo.subject && submitInfo.message
+		email = new Email(submitInfo)
+		email.save()
+		console.log("email", email)
+		res.send({success: "success"})
+	else
+		res.send({failure: 'failure'})
 )
 
 http.createServer(app).listen(app.get('port'), () ->

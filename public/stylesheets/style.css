@@ -7,7 +7,7 @@ html body {
   margin: 0;
   box-sizing: border-box;
   font: "Lucida Grande", Helvetica, Arial, sans-serif;
-  color: #989898;
+  color: #696969;
   margin-left: 0;
   margin-right: 0;
   padding: 0;
@@ -30,11 +30,11 @@ html body .wrapper div.tabbable {
   padding: 0;
 }
 html body .wrapper div.tabbable ul.nav-tabs li a:link {
-  color: #989898;
+  color: #696969;
 }
 html body .wrapper div.tabbable ul.nav-tabs li.active a {
-  background-color: #989898;
-  color: #fff;
+  background-color: #fffafa;
+  color: #696969;
 }
 html body .wrapper #self {
   padding: 30px;
@@ -46,9 +46,9 @@ html body .wrapper .text-field {
   text-align: left;
   padding-right: 30px;
   padding-left: 30px;
-  background-color: #989898;
-  height: 600px;
-  color: #fff;
+  background-color: #fffafa;
+  height: 650px;
+  color: #696969;
   width: 100;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
